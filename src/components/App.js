@@ -6,8 +6,8 @@ import ResultsList from './ResultsList'
 class App extends React.Component {
   state = { results: [] };
 
-  onTermSubmit = async (term) => {
-    const response = await TMDb.get('/search/movie', {
+  onTermSubmit = async (term, option) => {
+    const response = await TMDb.get(`/search/${option}`, {
       params: {
         query: term
       }
