@@ -9,6 +9,12 @@ const ResultItem = (props) => {
         <div className="header" >
           {props.title}
         </div>
+        <div>
+          <button
+            onClick={() => props.onAddClick(props.id)}  >
+            Add
+          </button>
+        </div>
       </div>
       
     </div>
